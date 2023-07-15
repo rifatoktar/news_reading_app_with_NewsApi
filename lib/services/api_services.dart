@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 Future<News> fetchTNews() async {
   const String baseUrl =
-      'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a60957d8c92a4fbaa675850e76e6cb16';
+      'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=Your_News_Api_key';
   final response = await http.get(Uri.parse(baseUrl));
 
   if (response.statusCode == 200) {
@@ -16,7 +16,7 @@ Future<News> fetchTNews() async {
 
 Future<News> fetchWSNews() async {
   String baseUrl =
-      'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=a60957d8c92a4fbaa675850e76e6cb16';
+      'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=Your_News_Api_Key';
   final response = await http.get(Uri.parse(baseUrl));
 
   if (response.statusCode == 200) {
@@ -28,7 +28,7 @@ Future<News> fetchWSNews() async {
 
 Future<News> fetchUSNews() async {
   String baseUrl =
-      'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a60957d8c92a4fbaa675850e76e6cb16';
+      'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=Your_News_Api_Key';
   final response = await http.get(Uri.parse(baseUrl));
 
   if (response.statusCode == 200) {
@@ -40,7 +40,7 @@ Future<News> fetchUSNews() async {
 
 Future<News> fetchSPNews() async {
   String baseUrl =
-      'https://newsapi.org/v2/everything?q=tesla&from=2023-06-14&sortBy=publishedAt&apiKey=a60957d8c92a4fbaa675850e76e6cb16';
+      'https://newsapi.org/v2/everything?q=tesla&from=2023-06-14&sortBy=publishedAt&apiKey=Your_News_Api_Key';
   final response = await http.get(Uri.parse(baseUrl));
 
   if (response.statusCode == 200) {
@@ -52,7 +52,7 @@ Future<News> fetchSPNews() async {
 
 Future<News> fetchDCNews() async {
   String baseUrl =
-      'https://newsapi.org/v2/everything?q=apple&from=2023-07-10&to=2023-07-10&sortBy=popularity&apiKey=a60957d8c92a4fbaa675850e76e6cb16';
+      'https://newsapi.org/v2/everything?q=apple&from=2023-07-10&to=2023-07-10&sortBy=popularity&apiKey=Your_News_Api_Key';
   final response = await http.get(Uri.parse(baseUrl));
 
   if (response.statusCode == 200) {
